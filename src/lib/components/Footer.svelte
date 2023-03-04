@@ -22,7 +22,7 @@
 
 <style lang="scss">
 	section {
-		@apply bg-gray-800 text-white border-t-4 border-green-400 flex flex-row justify-between items-center p-4 px-16 w-full;
+		@apply bg-gray-800 text-white border-t-4 border-green-400 flex flex-row justify-between items-center p-4 px-16 w-full flex-wrap;
 	}
 
 	h1 {
