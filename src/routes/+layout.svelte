@@ -34,6 +34,6 @@
 	}
 
 	footer {
-		@apply bottom-0 w-full sticky;
+		@apply bottom-0 w-full static;
 	}
 </style>
