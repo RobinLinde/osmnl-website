@@ -1,0 +1,12 @@
+{
+	"header": "Projects of OpenStreetMap Netherlands",
+	"openpoimap": {
+		"title": "OpenPoiMap",
+		"description": "OpenPoiMap is a user-friendly tool to find certain tags/POIs on OpenStreetMap. There is a choice of a large part of the categories defined in the [wiki](https://wiki.openstreetmap.org/wiki/Map_features#Amenity). By clicking on a point, the tags are visible, including references to the wiki. The tool is available on [openpoimap.org](https://openpoimap.org/)"
+	},
+	"osmok": {
+		"title": "OSM OK Netherlands",
+		"description": "To give a clear indication of what mapping layers are available for use in OpenStreetMap, Allroads has created a map that shows the layers and their licenses. The map shows layers that have been agreed upon, or layers that have a Public Domain license. More information can also be found on the [forum](https://forum.openstreetmap.org/viewtopic.php?id=66737). It can be found [here](http://mijndev.openstreetmap.nl/~allroads/NLOSMOK/OSMOKNL.html)."
+	},
+	"title": "Projects"
+}

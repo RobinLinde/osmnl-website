@@ -1,0 +1,20 @@
+{
+	"about": "OpenStreetMap Nederland is een onafhankelijke gemeenschap binnen OpenStreetMap.",
+	"contact": "Contact",
+	"events": {
+		"noEvents": "Geen activiteiten gepland",
+		"upcoming": "Aankomende activiteiten"
+	},
+	"home": "Home",
+	"opengeo": "OpenGEO",
+	"oxilion": "Oxilion",
+	"partners": {
+		"title": "Partners"
+	},
+	"osmf": "OpenStreetMap Foundation",
+	"projects": "Projecten",
+	"spokenLanguages": "Gesproken talen",
+	"support": "Ondersteun ons",
+	"title": "OpenStreetMap Nederland",
+	"welcome": "Welkom op de website van de Nederlandse community van OpenStreetMap"
+}
