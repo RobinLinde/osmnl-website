@@ -11,29 +11,34 @@
 		<link rel="alternate" hreflang={locale} href={`/${locale}/`} />
 	{/each}
 </svelte:head>
+<div>
+	<header>
+		<Header />
+	</header>
 
-<header>
-	<Header />
-</header>
+	<main>
+		<slot />
+	</main>
 
-<main>
-	<slot />
-</main>
-
-<footer>
-	<Footer />
-</footer>
+	<footer>
+		<Footer />
+	</footer>
+</div>
 
 <style lang="scss">
 	:global(body) {
 		@apply bg-gray-100;
 	}
 
+	div {
+		@apply flex flex-col min-h-screen;
+	}
+
 	main {
-		@apply p-16 text-lg lg:px-32 xl:px-64;
+		@apply p-16 text-lg lg:px-32 xl:px-64 flex-grow;
 	}
 
 	footer {
-		@apply bottom-0 w-full static;
+		@apply bottom-0 w-full;
 	}
 </style>
