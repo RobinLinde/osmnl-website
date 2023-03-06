@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from '$lib/i18n';
+	import { t, locale } from '$lib/i18n';
 	import index from '../../../node_modules/osm-community-index/dist/resources.json';
 	import indexDefaults from '../../../node_modules/osm-community-index/dist/defaults.json';
 	import type { DefaultItem, Resource } from '$lib/@types/CommunityIndex';
@@ -13,6 +13,12 @@
 	}
 
 	const defaults = indexDefaults.defaults as { [key: string]: DefaultItem };
+
+	let languageNames = new Intl.DisplayNames(locale.get(), { type: 'language' });
+
+	locale.subscribe((value) => {
+		languageNames = new Intl.DisplayNames(value, { type: 'language' });
+	});
 
 	function createUrl(resource: Resource): string {
 		if (resource.strings.url) {
@@ -75,7 +81,9 @@
 
 			{#if resources[resource].languageCodes}
 				<p class="languages">
-					{$t('common.spokenLanguages')}: {resources[resource].languageCodes?.join(' - ')}
+					{$t('common.spokenLanguages')}: {resources[resource].languageCodes
+						?.map((code) => languageNames.of(code))
+						.join(', ')}
 				</p>
 			{/if}
 		</div>
