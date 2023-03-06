@@ -24,4 +24,7 @@
 	span {
 		@apply flex flex-col justify-between items-center;
 	}
+	img {
+		@apply w-16 md:w-32 lg:w-64;
+	}
 </style>
