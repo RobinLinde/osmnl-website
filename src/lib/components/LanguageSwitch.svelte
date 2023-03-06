@@ -2,17 +2,30 @@
 	import { browser } from '$app/environment';
 	import { locales, locale, loadTranslations } from '$lib/i18n';
 
+	let languageNames = new Intl.DisplayNames(locale.get(), { type: 'language' });
+
 	locale.subscribe((value) => {
 		if (browser) {
 			localStorage.setItem('locale', value);
 			loadTranslations(value);
 		}
+		languageNames = new Intl.DisplayNames(value, { type: 'language' });
 	});
 </script>
 
 <select bind:value={$locale}>
 	{#each locales.get() as localeItem}
-		<option value={localeItem}>{localeItem}</option>
+		{#if localeItem === $locale}
+			<option value={localeItem}>
+				{languageNames.of(localeItem)}
+			</option>
+		{:else}
+			<option value={localeItem}>
+				{new Intl.DisplayNames(localeItem, { type: 'language' }).of(localeItem)} ({languageNames.of(
+					localeItem
+				)})
+			</option>
+		{/if}
 	{/each}
 </select>
 
