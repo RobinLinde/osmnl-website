@@ -7,25 +7,33 @@
 </script>
 
 <section>
-	<span
-		><h1>{$t('projects.' + id + '.title')}</h1>
+	<span class="project">
+		<h1>{$t('projects.' + id + '.title')}</h1>
 
-		<Markdown md={$t('projects.' + id + '.description')} /></span
-	>
+		<Markdown md={$t('projects.' + id + '.description')} />
+	</span>
 
 	{#if image}
-		<img src={image} alt={$t('projects.' + id + '.title')} />
+		<span class="image">
+			<img src={image} alt={$t('projects.' + id + '.title')} />
+		</span>
 	{/if}
 </section>
 
 <style lang="scss">
 	section {
-		@apply m-4 border-2 border-gray-300 rounded-lg shadow-lg p-6 flex items-center;
+		@apply m-4 border-2 border-gray-300 rounded-lg shadow-lg p-6 flex flex-wrap;
 	}
 	h1 {
 		@apply text-2xl font-bold;
 	}
-	img {
-		@apply rounded-full inline-block h-64 w-64 object-cover object-center;
+
+	span.project {
+		@apply flex-1;
+	}
+	span.image {
+		img {
+			@apply rounded-full object-cover object-center w-64 h-64;
+		}
 	}
 </style>
