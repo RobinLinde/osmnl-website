@@ -10,6 +10,17 @@
 	{#each $locales as locale}
 		<link rel="alternate" hreflang={locale} href={`/${locale}/`} />
 	{/each}
+	<script>
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on('init', (user) => {
+				if (!user) {
+					window.netlifyIdentity.on('login', () => {
+						document.location.href = '/admin/';
+					});
+				}
+			});
+		}
+	</script>
 </svelte:head>
 <div>
 	<header>
