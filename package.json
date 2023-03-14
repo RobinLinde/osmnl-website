@@ -33,7 +33,7 @@
 	"type": "module",
 	"dependencies": {
 		"osm-community-index": "^5.5.0",
-		"svelte-exmarkdown": "^1.1.8",
+		"svelte-exmarkdown": "^2.0.0",
 		"sveltekit-i18n": "^2.2.2"
 	}
 }
