@@ -7,6 +7,7 @@
 	<ul>
 		<NavigationItem page="" name={$t('common.home')} />
 		<NavigationItem page="projects" name={$t('common.projects')} />
+		<NavigationItem page="blog" name={$t('common.blog')} />
 		<NavigationItem page="contact" name={$t('common.contact')} />
 		<NavigationItem page="support" name={$t('common.support')} />
 	</ul>

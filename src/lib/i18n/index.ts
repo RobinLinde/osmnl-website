@@ -55,6 +55,16 @@ const config: Config = {
 			locale: 'nl',
 			key: 'projects',
 			loader: async () => (await import('./nl/projects.json')).default
+		},
+		{
+			locale: 'en',
+			key: 'blog',
+			loader: async () => (await import('./en/blog.json')).default
+		},
+		{
+			locale: 'nl',
+			key: 'blog',
+			loader: async () => (await import('./nl/blog.json')).default
 		}
 	]
 };
