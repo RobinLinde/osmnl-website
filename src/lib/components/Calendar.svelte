@@ -16,7 +16,6 @@
 		const response = await fetch(url);
 		data = (await response.json()) as Event[];
 		data = data.slice(0, items);
-		console.log(data);
 	});
 </script>
 
