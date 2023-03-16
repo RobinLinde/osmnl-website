@@ -1,5 +1,11 @@
 {
 	"about": "OpenStreetMap Netherlands is an independent community within OpenStreetMap.",
+	"blog": {
+		"title": "Blog",
+		"tags": "Tagged with:",
+		"noPosts": "No posts yet",
+		"readMore": "Read more"
+	},
 	"contact": "Contact",
 	"events": {
 		"noEvents": "No events planned",

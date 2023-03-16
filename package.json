@@ -4,12 +4,13 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "npm run generate:blog && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"generate:blog": "vite-node ./scripts/generateBlog.ts"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -32,8 +33,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"front-matter": "^4.0.2",
+		"fs": "^0.0.1-security",
 		"osm-community-index": "^5.5.0",
 		"svelte-exmarkdown": "^2.0.0",
-		"sveltekit-i18n": "^2.2.2"
+		"sveltekit-i18n": "^2.2.2",
+		"vite-node": "^0.29.3"
 	}
 }

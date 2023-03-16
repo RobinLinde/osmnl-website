@@ -1,5 +1,11 @@
 {
 	"about": "OpenStreetMap Nederland is een onafhankelijke gemeenschap binnen OpenStreetMap.",
+	"blog": {
+		"title": "Blog",
+		"tags": "Getagd met:",
+		"noPosts": "Geen berichten gevonden",
+		"readMore": "Lees meer"
+	},
 	"contact": "Contact",
 	"events": {
 		"noEvents": "Geen activiteiten gepland",
