@@ -26,7 +26,7 @@
 
 <style lang="scss">
 	.post {
-		@apply border border-gray-300 rounded-lg p-4;
+		@apply border border-gray-300 rounded-lg p-4 my-2;
 		h1 {
 			@apply text-2xl font-bold;
 		}
