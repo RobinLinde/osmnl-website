@@ -50,6 +50,7 @@
 	{#each filteredPosts as post}
 		<BlogPost
 			{post}
+			preview={true}
 			on:tagClick={(e) => {
 				filter = e.detail;
 			}}

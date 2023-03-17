@@ -21,7 +21,7 @@ function generatePostObject(folder: string): PostsFile {
 			if (typeof frontmatter.attributes == 'object') {
 				if (frontmatter.attributes !== null) {
 					const postObject: Post = {
-						slug: posts[post],
+						slug: posts[post].slice(0, -3),
 						title: frontmatter.attributes['title'] || '',
 						content: frontmatter.body,
 						date: frontmatter.attributes['date'],

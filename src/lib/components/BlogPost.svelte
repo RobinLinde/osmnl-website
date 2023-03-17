@@ -5,6 +5,7 @@
 	import SvelteExMarkdown from 'svelte-exmarkdown';
 
 	export let post: Post;
+	export let preview: boolean = false;
 
 	const dispatch = createEventDispatcher();
 
@@ -15,6 +16,10 @@
 			}
 		}
 	}
+
+	$: md = preview
+		? post.content.split('<!-- more -->')[0]
+		: post.content.replace(/<!-- more -->/g, '');
 </script>
 
 <section class="post">
@@ -23,8 +28,11 @@
 		<span class="date">{new Date(post.date).toLocaleDateString(locale.get())}</span>
 	{/if}
 	<span class="content">
-		<SvelteExMarkdown md={post.content} />
+		<SvelteExMarkdown {md} />
 	</span>
+	{#if preview}
+		<a href={`/blog/${post.slug}`} class="readMore">{$t('common.blog.readMore')}</a>
+	{/if}
 	{#if post.tags && post.tags.length > 0}
 		<h2>{$t('common.blog.tags')}</h2>
 		<ul>
@@ -55,5 +63,9 @@
 
 	li {
 		@apply text-blue-500 underline hover:text-blue-600 hover:no-underline cursor-pointer;
+	}
+
+	.readMore {
+		@apply block my-3 text-white bg-blue-500 rounded-lg p-2 w-fit hover:bg-blue-900;
 	}
 </style>
