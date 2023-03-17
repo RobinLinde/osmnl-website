@@ -1,9 +1,20 @@
 <script lang="ts">
 	import type { Post } from '$lib/@types/Posts';
 	import { locale, t } from '$lib/i18n';
+	import { createEventDispatcher } from 'svelte';
 	import SvelteExMarkdown from 'svelte-exmarkdown';
 
 	export let post: Post;
+
+	const dispatch = createEventDispatcher();
+
+	function tagClick(e: Event) {
+		if (e.type === 'click' || (e.type === 'keydown' && (e as KeyboardEvent).key === 'Enter')) {
+			if (e.target instanceof HTMLElement) {
+				dispatch('tagClick', e.target.innerText);
+			}
+		}
+	}
 </script>
 
 <section class="post">
@@ -14,11 +25,11 @@
 	<span class="content">
 		<SvelteExMarkdown md={post.content} />
 	</span>
-	{#if post.tags}
+	{#if post.tags && post.tags.length > 0}
 		<h2>{$t('common.blog.tags')}</h2>
 		<ul>
 			{#each post.tags as tag}
-				<li>{tag}</li>
+				<li on:click={tagClick} on:keydown={tagClick}>{tag}</li>
 			{/each}
 		</ul>
 	{/if}
@@ -40,5 +51,9 @@
 		:global(h2) {
 			@apply text-xl font-bold;
 		}
+	}
+
+	li {
+		@apply text-blue-500 underline hover:text-blue-600 hover:no-underline cursor-pointer;
 	}
 </style>
