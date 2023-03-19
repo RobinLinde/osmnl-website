@@ -18,9 +18,13 @@
 	});
 </script>
 
-<!-- <svelte:head>
-	<title>{post.title} - {$t('common.title')}</title>
-</svelte:head> -->
+<svelte:head>
+	{#if post}
+		<title>{post.title} - {$t('common.title')}</title>
+	{:else}
+		<title>{$t('common.blog.notAvailable')} - {$t('common.title')}</title>
+	{/if}
+</svelte:head>
 
 {#if data.error}
 	{data.error}
