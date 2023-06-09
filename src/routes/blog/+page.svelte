@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 	import type { PostsFile } from '$lib/@types/Posts';
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import { locale, t } from '$lib/i18n';
@@ -7,7 +9,7 @@
 	const postData = posts as PostsFile;
 
 	let language = locale.get() in postData ? locale.get() : 'en';
-	locale.subscribe((value) => {
+	locale.subscribe(() => {
 		language = locale.get() in postData ? locale.get() : 'en';
 	});
 
@@ -22,7 +24,14 @@
 			return self.indexOf(value) === index;
 		});
 
-	let filter = 'all';
+	// Determine filter
+	let filter = $page.url.searchParams.get('filter') || 'all';
+
+	// Update filter URL param
+	$: {
+		$page.url.searchParams.set('filter', filter);
+		goto(`?${$page.url.searchParams.toString()}`, { replaceState: true });
+	}
 
 	let sort = ['date', 'desc'];
 
