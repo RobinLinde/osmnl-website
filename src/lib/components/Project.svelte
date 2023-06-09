@@ -30,6 +30,10 @@
 
 	span.project {
 		@apply flex-1;
+
+		:global(a) {
+			@apply text-blue-500 underline hover:text-blue-600 hover:no-underline;
+		}
 	}
 	span.image {
 		img {
