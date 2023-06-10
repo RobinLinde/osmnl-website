@@ -56,6 +56,6 @@
 
 <style lang="scss">
 	li {
-		@apply text-blue-500 underline hover:text-blue-600 hover:no-underline cursor-pointer;
+		@apply text-blue-600 underline hover:text-blue-700 hover:no-underline cursor-pointer;
 	}
 </style>

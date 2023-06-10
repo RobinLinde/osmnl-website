@@ -62,10 +62,10 @@
 	}
 
 	li {
-		@apply text-blue-500 underline hover:text-blue-600 hover:no-underline cursor-pointer;
+		@apply text-blue-600 underline hover:text-blue-700 hover:no-underline cursor-pointer;
 	}
 
 	.readMore {
-		@apply block my-3 text-white bg-blue-500 rounded-lg p-2 w-fit hover:bg-blue-900;
+		@apply block my-3 text-white bg-blue-600 rounded-lg p-2 w-fit hover:bg-blue-900;
 	}
 </style>

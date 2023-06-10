@@ -34,6 +34,6 @@
 	}
 
 	a {
-		@apply underline text-gray-300 hover:no-underline hover:text-gray-400;
+		@apply underline text-gray-300 hover:no-underline hover:text-gray-400 py-4;
 	}
 </style>
