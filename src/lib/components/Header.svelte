@@ -7,7 +7,7 @@
 </script>
 
 <section>
-	<img src="/logo.svg" alt={$t('common.title')} />
+	<img src="/logo.svg" alt={$t('common.title')} width="64" height="64" />
 
 	<span>
 		<Navigation />
