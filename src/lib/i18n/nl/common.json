@@ -8,7 +8,17 @@
 		"noPosts": "Geen berichten gevonden",
 		"notAvailable": "bericht niet beschikbaar",
 		"otherLanguages": "Deze blogpost is nog niet beschikbaar in het Nederlands, maar wel in de volgende talen:",
-		"readMore": "Lees meer"
+		"readMore": "Lees meer",
+		"sort": {
+			"label": "Sorteren op:",
+			"date": "Datum",
+			"direction": {
+				"ascending": "Oplopend",
+				"descending": "Aflopend",
+				"title": "Sorteerrichting"
+			},
+			"title": "Titel"
+		}
 	},
 	"contact": "Contact",
 	"events": {

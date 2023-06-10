@@ -9,7 +9,7 @@ export interface Post {
 	slug: string;
 
 	/**
-	 * Already localized titlt of the post
+	 * Already localized title of the post
 	 */
 	title: string;
 	date?: string;
