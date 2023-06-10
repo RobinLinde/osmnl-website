@@ -11,6 +11,8 @@
 	{#each $locales as locale}
 		<link rel="alternate" hreflang={locale} href={`${$page.url.origin}/${locale}/`} />
 	{/each}
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="OpenStreetMap Netherlands local community website" />
 </svelte:head>
 <div>
 	<header>
