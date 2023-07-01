@@ -32,7 +32,7 @@
 		@apply flex-1;
 
 		:global(a) {
-			@apply text-blue-500 underline hover:text-blue-600 hover:no-underline;
+			@apply text-blue-600 underline hover:text-blue-700 hover:no-underline;
 		}
 	}
 	span.image {

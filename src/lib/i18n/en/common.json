@@ -1,5 +1,25 @@
 {
 	"about": "OpenStreetMap Netherlands is an independent community within OpenStreetMap.",
+	"blog": {
+		"all": "All tags",
+		"filter": "Filter by tag:",
+		"title": "Blog",
+		"tags": "Tagged with:",
+		"noPosts": "No posts yet",
+		"notAvailable": "Post not available",
+		"otherLanguages": "This blog post is not available in your language, but there are other languages available:",
+		"readMore": "Read more",
+		"sort": {
+			"label": "Sort by:",
+			"date": "Date",
+			"direction": {
+				"ascending": "Ascending",
+				"descending": "Descending",
+				"title": "Sort direction"
+			},
+			"title": "Title"
+		}
+	},
 	"contact": "Contact",
 	"events": {
 		"noEvents": "No events planned",

@@ -25,11 +25,11 @@ npm run build
 ## Components
 
 ```mermaid
-graph TB
+graph LR
     L[+layout.svelte] --> H & M & F
 
     H[Header] --> N & C & LS
-    M[Main] --> h & p & c & s
+    M[Main] --> h & b & bd & p & c & s
     F[Footer]
 
     N[Navigation] --> NI
@@ -39,9 +39,13 @@ graph TB
     NI[NavigationItem]
 
     h["Home (+page.svelte)"]
+    b["Blog (+page.svelte)"] --> BP
+    bd["Blog detail page ([slug]/+page.svelte)"] --> BP
     p["Projects (+page.svelte)"] --> P
     c["Contact (+page.svelte)"] --> CI
     s["Support (+page.svelte)"]
+
+    BP[BlogPost]
 
     P[Project]
 

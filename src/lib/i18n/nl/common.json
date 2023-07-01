@@ -1,5 +1,25 @@
 {
 	"about": "OpenStreetMap Nederland is een onafhankelijke gemeenschap binnen OpenStreetMap.",
+	"blog": {
+		"all": "Alle tags",
+		"filter": "Filter op tag:",
+		"title": "Blog",
+		"tags": "Getagd met:",
+		"noPosts": "Geen berichten gevonden",
+		"notAvailable": "bericht niet beschikbaar",
+		"otherLanguages": "Deze blogpost is nog niet beschikbaar in het Nederlands, maar wel in de volgende talen:",
+		"readMore": "Lees meer",
+		"sort": {
+			"label": "Sorteren op:",
+			"date": "Datum",
+			"direction": {
+				"ascending": "Oplopend",
+				"descending": "Aflopend",
+				"title": "Sorteerrichting"
+			},
+			"title": "Titel"
+		}
+	},
 	"contact": "Contact",
 	"events": {
 		"noEvents": "Geen activiteiten gepland",
