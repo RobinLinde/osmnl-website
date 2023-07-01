@@ -14,6 +14,9 @@ function generatePostObject(folder: string): PostsFile {
 
 		// Loop through posts
 		for (const post in posts) {
+			// Check if file is actually a Markdown file
+			if (!posts[post].endsWith('.md')) continue;
+
 			const postData = readFileSync(`${folder}/${languages[language]}/${posts[post]}`, 'utf-8');
 
 			// Extract frontmatter
