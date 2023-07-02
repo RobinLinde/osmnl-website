@@ -5,7 +5,7 @@
 	import SvelteExMarkdown from 'svelte-exmarkdown';
 
 	export let post: Post;
-	export let preview: boolean = false;
+	export let preview = false;
 
 	const dispatch = createEventDispatcher();
 

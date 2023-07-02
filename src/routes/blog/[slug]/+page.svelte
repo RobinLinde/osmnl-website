@@ -41,7 +41,7 @@
 	<ul>
 		{#each data.props.languages as language}
 			<li
-				on:click={(e) => {
+				on:click={() => {
 					locale.set(language);
 				}}
 				on:keydown={(e) => {
