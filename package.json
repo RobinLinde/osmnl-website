@@ -38,6 +38,6 @@
 		"sveltekit-i18n": "^2.4.2",
 		"front-matter": "^4.0.2",
 		"fs": "^0.0.1-security",
-		"vite-node": "^0.34.4"
+		"vite-node": "^0.34.6"
 	}
 }
