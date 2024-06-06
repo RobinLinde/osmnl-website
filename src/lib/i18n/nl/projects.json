@@ -1,12 +1,4 @@
 {
 	"header": "Projecten van OpenStreetMap Nederland",
-	"openpoimap": {
-		"title": "OpenPoiMap",
-		"description": "OpenPoiMap is een gebruiksvriendelijke tool om bepaalde tags/POIs te kunnen vinden op OpenStreetMap. Er is keuze uit een groot deel van de in de [wiki](https://wiki.openstreetmap.org/wiki/Map_features#Amenity) gedefiniëerde categorieën. Door op een punt te klikken worden de tags zichtbaar, inclusief verwijzingen naar de wiki.\nDe tool is beschikbaar op [openpoimap.org](https://openpoimap.org/)"
-	},
-	"osmok": {
-		"title": "OSM OK Nederland",
-		"description": "Om een duidelijk te laten zien welke kaartlagen gebruikt mogen worden voor intekenen in OpenStreetMap, heeft Allroads een kaart gemaakt die de lagen en bijbehorende licenties laat zien. De kaart laat lagen zien waarover afspraken zijn gemaakt, of lagen die een Publiek Domein licentie hebben. Meer informatie is ook te vinden op het [forum](https://forum.openstreetmap.org/viewtopic.php?id=66737). Deze is [hier](http://mijndev.openstreetmap.nl/~allroads/NLOSMOK/OSMOKNL.html) te vinden."
-	},
 	"title": "Projecten"
 }

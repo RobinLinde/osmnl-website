@@ -1,6 +1,17 @@
 <script lang="ts">
+	import type { ProjectsFile } from '$lib/@types/Projects';
 	import Project from '$lib/components/Project.svelte';
-	import { t } from '$lib/i18n';
+	import { locale, t } from '$lib/i18n';
+	import projects from './projects.json';
+
+	const projectData = projects as ProjectsFile;
+
+	let language = locale.get() in projectData ? locale.get() : 'en';
+	locale.subscribe(() => {
+		language = locale.get() in projectData ? locale.get() : 'en';
+	});
+
+	$: filteredProjects = projectData[language];
 </script>
 
 <svelte:head>
@@ -9,8 +20,9 @@
 
 <h1>{$t('projects.header')}</h1>
 
-<Project id="openpoimap" image="screenshot-openpoimap.png" />
-<Project id="osmok" image="screenshot-osmoknl.png" />
+{#each filteredProjects as project}
+	<Project {project}/>
+{/each}
 
 <style lang="scss">
 	h1 {

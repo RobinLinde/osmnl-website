@@ -14,3 +14,4 @@ yarn.lock
 
 # Ignore generated blog file
 src/routes/blog/posts.json
+src/routes/projects/projects.json

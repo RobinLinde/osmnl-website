@@ -1,21 +1,21 @@
 <script lang="ts">
+	import type { Project } from '$lib/@types/Projects';
 	import { t } from '$lib/i18n';
 	import Markdown from 'svelte-exmarkdown';
 
-	export let id: string;
-	export let image = '';
+	export let project: Project;
 </script>
 
 <section>
 	<span class="project">
-		<h1>{$t('projects.' + id + '.title')}</h1>
+		<h1>{project.title}</h1>
 
-		<Markdown md={$t('projects.' + id + '.description')} />
+		<Markdown md={project.content} />
 	</span>
 
-	{#if image}
+	{#if project.image}
 		<span class="image">
-			<img src={image} alt={$t('projects.' + id + '.title')} />
+			<img src={project.image} alt={project.title} />
 		</span>
 	{/if}
 </section>

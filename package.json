@@ -4,17 +4,20 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm run generate:blog && vite build",
+		"build": "npm run generate && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"generate:blog": "vite-node ./scripts/generateBlog.ts"
+		"generate": "npm run generate:blog && npm run generate:projects",
+		"generate:blog": "vite-node ./scripts/generatePosts.ts -- blog blog src/routes/blog/posts.json",
+		"generate:projects": "vite-node ./scripts/generatePosts.ts -- projects project src/routes/projects/projects.json"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.2.1",
 		"@sveltejs/kit": "^2.5.10",
+		"@types/node": "^20.14.2",
 		"@typescript-eslint/eslint-plugin": "^7.12.0",
 		"@typescript-eslint/parser": "^7.12.0",
 		"autoprefixer": "^10.4.19",
@@ -33,11 +36,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"front-matter": "^4.0.2",
 		"osm-community-index": "^5.7.1",
 		"svelte-exmarkdown": "^3.0.5",
 		"sveltekit-i18n": "^2.4.2",
-		"front-matter": "^4.0.2",
-		"fs": "^0.0.1-security",
 		"vite-node": "^1.6.0"
 	}
 }
