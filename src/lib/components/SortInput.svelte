@@ -46,7 +46,7 @@
 	</select>
 </span>
 
-<style lang="scss">
+<style lang="postcss">
 	.sort {
 		@apply border-2 border-gray-300 rounded-md p-1 bg-slate-100;
 
@@ -55,16 +55,12 @@
 		}
 
 		.arrow {
-			// Overlay the arrows on top of each other, as well as the checkbox
 			@apply text-gray-500 absolute top-0 left-0 pointer-events-none z-10 hidden w-5 h-5;
 		}
 
 		input {
-			// Make the checkbox invisible, but still clickable
-			// We also need to make it the same size as the arrows
 			@apply cursor-pointer -z-10 opacity-0 w-5 h-5;
 
-			// If it's checked, show the up the corresponding arrow
 			&:checked {
 				~ .arrow-up {
 					@apply block;
@@ -74,7 +70,6 @@
 				}
 			}
 
-			// If it's not checked, show the down arrow
 			&:not(:checked) {
 				~ .arrow-up {
 					@apply hidden;

@@ -21,10 +21,10 @@
 <h1>{$t('projects.header')}</h1>
 
 {#each filteredProjects as project}
-	<Project {project}/>
+	<Project {project} />
 {/each}
 
-<style lang="scss">
+<style lang="postcss">
 	h1 {
 		@apply text-3xl border-b-4 border-gray-300 mb-2;
 	}

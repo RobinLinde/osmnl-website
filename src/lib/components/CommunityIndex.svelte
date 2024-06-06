@@ -90,7 +90,7 @@
 	{/each}
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	.community-list {
 		@apply grid grid-cols-1 gap-1 my-4;
 	}

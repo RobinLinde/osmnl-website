@@ -40,21 +40,23 @@
 	{$t('common.blog.otherLanguages')}
 	<ul>
 		{#each data.props.languages as language}
-			<li
-				on:click={() => {
-					locale.set(language);
-				}}
-				on:keydown={(e) => {
-					if (e.key === 'Enter') locale.set(language);
-				}}
-			>
-				{languageNames.of(language)}
+			<li>
+				<button
+					on:click={() => {
+						locale.set(language);
+					}}
+					on:keydown={(e) => {
+						if (e.key === 'Enter') locale.set(language);
+					}}
+				>
+					{languageNames.of(language)}
+				</button>
 			</li>
 		{/each}
 	</ul>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
 	li {
 		@apply text-blue-600 underline hover:text-blue-700 hover:no-underline cursor-pointer;
 	}

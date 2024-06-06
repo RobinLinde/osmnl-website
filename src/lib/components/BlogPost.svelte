@@ -19,7 +19,7 @@
 
 	$: md = preview
 		? post.content.split('<!-- more -->')[0]
-		: post.content.replace(/<!-- more -->/g, '');
+		: post.content.replace('<!-- more -->', '');
 </script>
 
 <section class="post">
@@ -37,13 +37,13 @@
 		<h2>{$t('common.blog.tags')}</h2>
 		<ul>
 			{#each post.tags as tag}
-				<li on:click={tagClick} on:keydown={tagClick}>{tag}</li>
+				<li><button on:click={tagClick} on:keydown={tagClick}>{tag}</button></li>
 			{/each}
 		</ul>
 	{/if}
 </section>
 
-<style lang="scss">
+<style lang="postcss">
 	.post {
 		@apply border border-gray-300 rounded-lg p-4 my-2;
 		h1 {

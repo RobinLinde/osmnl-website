@@ -22,7 +22,7 @@
 	>
 </li>
 
-<style lang="scss">
+<style lang="postcss">
 	li {
 		@apply float-left text-green-400 text-2xl underline cursor-pointer hover:text-green-800 hover:no-underline m-2;
 	}

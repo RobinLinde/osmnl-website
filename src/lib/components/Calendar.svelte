@@ -33,7 +33,7 @@
 	{/if}
 </section>
 
-<style lang="scss">
+<style lang="postcss">
 	section {
 		@apply bg-gray-900 border-2 border-green-400 rounded-lg my-4 p-4;
 	}

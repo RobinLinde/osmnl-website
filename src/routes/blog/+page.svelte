@@ -106,7 +106,7 @@
 	<h1>{$t('common.blog.noPosts')}</h1>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
 	.option {
 		@apply p-1;
 	}

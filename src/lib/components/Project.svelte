@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Project } from '$lib/@types/Projects';
-	import { t } from '$lib/i18n';
 	import Markdown from 'svelte-exmarkdown';
 
 	export let project: Project;
@@ -20,7 +19,7 @@
 	{/if}
 </section>
 
-<style lang="scss">
+<style lang="postcss">
 	section {
 		@apply m-4 border-2 border-gray-300 rounded-lg shadow-lg p-6 flex flex-wrap;
 	}
@@ -31,7 +30,7 @@
 	span.project {
 		@apply flex-1;
 
-		:global(a) {
+		a {
 			@apply text-blue-600 underline hover:text-blue-700 hover:no-underline;
 		}
 	}

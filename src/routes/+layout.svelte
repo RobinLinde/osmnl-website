@@ -28,7 +28,7 @@
 	</footer>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	:global(body) {
 		@apply bg-gray-100;
 	}
