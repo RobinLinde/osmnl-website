@@ -15,7 +15,7 @@
 		"generate:projects": "vite-node ./scripts/generatePosts.ts -- projects project src/routes/projects/projects.json"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.2.1",
+		"@sveltejs/adapter-auto": "^3.2.2",
 		"@sveltejs/kit": "^2.5.17",
 		"@types/node": "^20.14.2",
 		"@typescript-eslint/eslint-plugin": "^7.12.0",
